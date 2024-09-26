@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,400;0,600;1,700&family=Roboto+Condensed:ital,wght@0,100;0,200;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="background-image"></div>
+        <nav>
+            <a href="home.html"><img src="Images For my site/Tech Con-logos_transparent.png" alt="Tech Con Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="registration.html">REGISTRATION</a></li>
+                    <li><a href="schedule.html">OUR SCHEDULE</a></li>
+                    <li><a href="speakers.html">THE SPEAKERS</a></li>
+                    <li><a href="contact.html">CONTACT US NOW</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>2023 Technology Conference</h1>
+            <p>Welcome to the forefront of innovation and collaboration
+                at our Tech Convention!<br>Join us for an exhilarating journey
+                into the cutting-edge realms of technology, where ideas converge
+                and possibilities unfold.</p>
+            <a href="home.html" class="hero-btn">Visit us to know more</a>
+        </div>
+    </section>
+
+    <section id="information" class="information">
+        <h1>What you will find at TechCon</h1>
+        <p>Embark on a journey of innovation and exploration at TechCon. Our conference brings together a dynamic blend of technology enthusiasts, thought leaders, and innovators. Discover the following key features:</p>
+
+        <div class="row">
+            <div class="information-col">
+                <h3>Leaders</h3>
+                <p>Engage with and learn from world-renowned leaders in the tech industry. TechCon provides a unique opportunity to meet and speak with influential figures shaping the future of technology.</p>
+            </div>
+            <div class="information-col">
+                <h3>Network</h3>
+                <p>Build meaningful connections with future colleagues and collaborators. TechCon offers a platform for networking where you can connect with like-minded individuals passionate about technology and innovation.</p>
+            </div>
+            <div class="information-col">
+                <h3>Refreshments</h3>
+                <p>Indulge in a diverse array of refreshments that complement the vibrant atmosphere of TechCon. Enjoy a culinary journey while exploring groundbreaking ideas and technologies.</p>
+            </div>
+            <div class="information-col">
+                <h3>Contacts</h3>
+                <p>Expand your network by dropping your contacts at our dedicated space. Whether you're seeking partnerships, collaborations, or simply want to stay connected, TechCon is the perfect place to share your information.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="location">
+        <h1>Where will we be this year?</h1>
+        <p>At TechCon, we've had the privilege of hosting our events in some remarkable venues,
+            including the iconic:
+            <strong>Percy Gee Building</strong>, the state-of-the-art <strong>Fielding Johnson Building</strong>, and the distinguished <strong>Sir Bob Burgess Building</strong>. These venues have witnessed the convergence of technology enthusiasts, innovators, and leaders, creating an atmosphere of collaboration and exploration. This year, we are excited to return to the esteemed <strong>Fielding Joohnson Building</strong>, where the rich history of our past events merges with the anticipation of new discoveries. Join us at this iconic location as we continue to push the boundaries of technology and celebrate the spirit of innovation.</p>
+
+
+        <div class="row">
+            <div class="location-col">
+                <img src="Images For my site/sirbob.jpg">
+                <div class="layer">
+                    <h3> SIR BOB BURGESS</h3>
+                </div>
+            </div>
+
+            <div class="location-col">
+                <img src="Images For my site/percygee.jpg">
+                <div class="layer">
+                    <h3> Percy Gee</h3>
+                </div>
+            </div>
+            <div class="location-col">
+                <img src="Images For my site/fielding.jpeg">
+                <div class="layer">
+                    <h3> Fielding Johnson</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h1>Any more TechCon queries?</h1>
+        <h2>Register now!</h2>
+        <a href="registration.html" class="hero-btn" id="contactLink">REGISTER NOW</a>
+    </section>
+
+    <section id="footer" class="footer">
+        <h4>About us</h4>
+        <p>This page was made by UoL student Deric Idehien-Omoruyi</p>
+        <div class="icon"></div>
+    </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+</body>
+
+</html>

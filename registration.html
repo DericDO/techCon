@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,400;0,600;1,700&family=Roboto+Condensed:ital,wght@0,100;0,200;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="background-image"></div>
+        <nav>
+            <a href="home.html"><img src="Images For my site/Tech Con-logos_transparent.png" alt="Tech Con Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="home.html">INFORMATION</a></li>
+                    <li><a href="#registration">REGISTRATION</a></li>
+                    <li><a href="home.html">LOCATION</a></li>
+                    <li><a href="schedule.html">OUR SCHEDULE</a></li>
+                    <li><a href="speakers.html">THE SPEAKERS</a></li>
+                    <li><a href="contact.html">HOW TO CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+    <div class="text-box">
+        <h1>2023 Technology Conference</h1>
+        <p>Welcome to the forefront of innovation and collaboration
+            at our Tech Convention!<br>Join us for an exhilarating journey
+            into the cutting-edge realms of technology, where ideas converge
+            and possibilities unfold.</p>
+        <a href="home.html" class="hero-btn">Visit us to know more</a>
+    </div>
+    
+    <section id="registration" class="registration">
+        <h1>Registration for TechCon</h1>
+        <p>Register now to secure your spot at the upcoming TechCon. Don't miss the opportunity to be a part of this innovative event!</p>
+
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="Surname">Surname:</label>
+            <input type="text" id="Surname" name="Surname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="University">University:</label>
+            <input type="text" id="University" name="University">
+
+            <button type="button" onclick="register()">Register</button>
+        </form>
+    </section>
+
+    <div class="popup" id="successPopup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>Registration successful!</p>
+        </div>
+    </div>
+
+    <section id="footer" class="footer">
+        <h4>About us</h4>
+        <p>This page was made by UoL student Deric Idehien-Omoruyi</p>
+        <div class="icon"></div>
+    </section>
+
+    <!-- JS -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        function register() {
+            var name = document.getElementById('name').value;
+            var surname = document.getElementById('Surname').value;
+            var email = document.getElementById('email').value;
+            var university = document.getElementById('University').value;
+
+            if (typeof (Storage) !== "undefined") {
+                var registrations = JSON.parse(localStorage.getItem('registrations')) || [];
+
+                registrations.push({
+                    name: name,
+                    surname: surname,
+                    email: email,
+                    university: university
+                });
+
+                localStorage.setItem('registrations', JSON.stringify(registrations));
+
+                document.getElementById('registrationForm').reset();
+
+                showPopup();
+
+                setTimeout(closePopup, 1000);
+            } else {
+                alert('Sorry, your browser does not support localStorage. Please use a different browser.');
+            }
+        }
+
+        function showPopup() {
+            var popup = document.getElementById('successPopup');
+            popup.style.display = 'block';
+        }
+
+        function closePopup() {
+            var popup = document.getElementById('successPopup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

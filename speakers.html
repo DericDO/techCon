@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,400;0,600;1,700&family=Roboto+Condensed:ital,wght@0,100;0,200;0,600;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <div class="background-image"></div>
+        <nav>
+            <a href="home.html"><img src="/Images For my site/Tech Con-logos_transparent.png" alt="Tech Con Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="home.html">INFORMATION</a></li>
+                    <li><a href="registration.html">REGISTRATION</a></li>
+                    <li><a href="schedule.html">OUR SCHEDULE</a></li>
+                    <li><a href="#speakers">THE SPEAKERS</a></li>
+                    <li><a href="contact.html">HOW TO CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+    <div class="text-box">
+        <h1>2023 Technology Conference</h1>
+        <p>Welcome to the forefront of innovation and collaboration
+            at our Tech Convention!<br>Join us for an exhilarating journey
+            into the cutting-edge realms of technology, where ideas converge
+            and possibilities unfold.</p>
+        <a href="home.html" class="hero-btn">Visit us to know more</a>
+    </div>
+
+    <section class="speakers" id="speakers">
+        <h1>The Speakers</h1>
+        <div class="speaker">
+            <h2>Dr. Fei-Fei Li</h2>
+            <img src="Images For my site/lei.png" alt="Dr. Fei-Fei Li">
+            <p>A leading expert in artificial intelligence, Dr. Fei-Fei Li is the Co-Director of the Stanford Institute for Human-Centered Artificial Intelligence (HAI). She could provide valuable insights into the latest developments in AI, its ethical implications, and how it is shaping the future of various industries.</p>
+        </div>
+
+        <div class="speaker">
+            <h2>Satya Nadella</h2>
+            <img src="Images For my site/nad.jpg" alt="Satya Nadella">
+            <p>As the CEO of Microsoft, Satya Nadella has played a key role in the company's transformation and its focus on cloud computing and artificial intelligence. He could speak about the future of technology, Microsoft's vision, and the role of tech in solving global challenges.</p>
+        </div>
+
+        <div class="speaker">
+            <h2>Elon Musk</h2>
+            <img src="Images For my site/elo.jpg" alt="Elon Musk">
+            <p>Founder and CEO of SpaceX and Tesla, Elon Musk is known for his innovative approach to technology and his ambitious projects. He could share insights on the future of space exploration, renewable energy, and the impact of artificial intelligence.</p>
+        </div>
+        
+    </section>
+
+    <section id="footer" class="footer">
+        <h4>About us</h4>
+        <p>This page was made by UoL student Deric Idehien-Omoruyi</p>
+    </section>
+
+    <script>
+    
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
